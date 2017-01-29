@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/python /home/pi/rpi_shutdown_button/pishutdown.py
+WorkingDirectory=/home/pi/rpi_shutdown_button/
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=pishutdown
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
